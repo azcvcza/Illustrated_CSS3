@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 TABLE</title>
+</head>
+<style>
+    *{margin:0;padding:0}
+    body{padding:40px 100px;}
+    .demo{
+        width:600px;
+        margin:40px auto;
+        font-family:'trebuchet MS','Lucida sans',Arial;
+        font-size:14px;
+        color:#444;
+    }
+
+    /*default table*/
+    table{
+        *border-collapse:collapse;
+        border-spacing:0;
+        width:100%;
+    }
+    /*circle border */
+    .bordered{
+        border:solid #ccc 1px;
+        border-radius:6x;
+        box-shadow:0 1px 1px #ccc;
+    }
+    .bordered tr{
+        -webkit-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+    }
+    .bordered .highlight,
+    .bordered tr:hover{
+        background: lightblue;
+    }
+    .bordered td,
+    .bordered th{
+        border-left:1px solid #ccc;
+        border-top:1px solid #ccc;
+        padding:10px;
+        text-align:left;
+    }
+    .bordered th{
+        background-color: #dce9f9;
+        background-image:-webkit-gradient(linear,left top,left bottom,from(#ebf3fc),to(#dce9f9));
+        background-image:-webkit-linear-gradient(top,#ebf3fc,#dce9f9);
+        background-image:linear-gradient(top,#ebf3fc,#dce9f9);
+        filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ebf3fc,endColorstr=#dce9f9);
+        box-shadow:0 1px 0 rgba(255,255,255,0.8) inset;
+        border-top:none;
+        text-shadow:0 1px 0 rgba(255,255,255,0.5);
+    }
+    /*using :first-child to delete left bording*/
+    .bordered td:first-child,
+    .bordered th:first-child{
+        border-left:none;
+    }
+    .bordered th:first-child{
+        border-radius: 6px 0 0 0 ;
+    }
+    .bordered th:last-child{
+        border-radius: 0 6px 0 0;
+    }
+    .bordered tr:last-child td:first-child{
+        border-radius: 0 0 0 6px;
+    }
+    .bordered tr:last-child td:last-child{
+        border-radius: 0 0 6px 0;
+    }
+
+    /* making zebra table*/
+    .zebra td,
+    .zebra th{
+        padding:10px;
+        border-bottom:1px solid #f2f2f2;
+        bcakground-color:grey;
+    }
+    
+    .zebra .alternate,
+    .zebra tbody tr:nth-child(even){
+        background:lightcoral;
+        box-shadow:0 1px 0 rgba(255,255,255,0.8) inset;
+
+    }
+    .zebra th{
+        text-align:left;
+        text-shadow:0 1px 0 rgba(255,255,255,0.5);
+        border-bottom:1px solid #ccc;
+        background-color:#eee;
+        background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#eee));
+        background-image:-webkit-linear-gradient(top,#f5f5f5,#eee);
+        background-image:linear-gradient(top,#f5f5f5,#eee);
+        filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f5f5f5,endColorstr=#eee);
+
+    }
+    .zebra th:first-child{
+        border-radius:6px 0 0 0;
+    }
+    .zebra th:last-child{
+        border-radius:0 6px 0 0;
+    }
+    .zebra tfoot td{
+        border-bottom: 0;
+        border-top:1px solid #fff;
+        background-color:#f1f1f1;
+    }
+    .zebra tfoot td:first-child{
+        border-radius:0 0 0 6px;
+    }
+    .zebra tfoot td:last-child{
+        border-radius: 0 0 6px 0;
+    }
+
+</style>
+<body>
+    <table class="bordered">
+        <tr class="bordered">
+            <th class="bordered">#</th>
+            <th class="bordered">IMDB TOP 10 MOVIES</th>
+            <th class="bordered">YEAR</th>
+        </tr>
+        <tr class="bordered">
+            <td class="bordered">1</td>
+            <td class="bordered">hello world</td>
+            <td class="bordered">1994</td>
+        </tr>
+        <tr class="bordered">
+            <td class="bordered">2</td>
+            <td class="bordered">hello world</td>
+            <td class="bordered">1995</td>
+        </tr>
+        <tr class="bordered">
+            <td class="bordered">3</td>
+            <td class="bordered">hello world</td>
+            <td class="bordered">1996</td>
+        </tr>
+    </table>
+
+    <table class="zebra">
+        <tr class="zebra">
+            <th class="zebra">#</th>
+            <th class="zebra">IMDB TOP 10 MOVIES</th>
+            <th class="zebra">YEAR</th>
+        </tr>
+        <tr class="zebra">
+            <td class="zebra">1</td>
+            <td class="zebra">hello world</td>
+            <td class="zebra">1994</td>
+        </tr>
+        <tr class="zebra">
+            <td class="zebra">2</td>
+            <td class="zebra">hello world</td>
+            <td class="zebra">1995</td>
+        </tr>
+        <tr class="zebra">
+            <td class="zebra">3</td>
+            <td class="zebra">hello world</td>
+            <td class="zebra">1996</td>
+        </tr>
+    </table>
+</body>
+</html>
