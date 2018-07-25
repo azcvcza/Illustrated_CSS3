@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>order修改顺序，实现圣杯布局</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    html,body{
+        height:100%;
+        color:#fff;
+    }
+    body{
+        min-width: 100%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow:column wrap;
+        flex-flow:column wrap;
+        -webkit-justify-content:start;
+        justify-content: start;
+        
+    }
+    header,section,nav,aside,footer{
+        display:block;
+    }
+    header{
+        background-color:lightcyan;
+        min-height:100px;
+        padding:10px 20px;
+        
+        
+    }
+    section{
+        display: flex;
+        flex-flow: row wrap;
+        flex:1;
+        align-items: stretch;
+        background: lightgray;
+    }
+    article{
+        padding:1%;
+        margin-left:2%;
+        margin-right:2%;
+        flex:1;
+        order:2;
+        background: lightblue;
+    }
+    aside{
+        padding:1%;
+        width:220px;
+        
+        order:3;
+        background: lightpink
+    }
+    nav{
+        padding:1%;
+        
+        width:200px;
+        order:1;
+        background: lightskyblue
+    }
+    footer{
+        background: lightsalmon;
+        min-height: 60px;
+        padding:1%;
+        min-width:100%;
+        order:3;
+    }
+</style>
+<body>
+    <header>header</header>
+    <section>
+        <article>article</article>
+        <nav>nav</nav>
+        <aside>aside</aside>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>
