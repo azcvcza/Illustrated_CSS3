@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-box制作三列自适应布局</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        -webkit-box-sizing: border-box;
+    }
+    #header{
+        height:33%;
+    }
+    #footer{
+        height:33%;
+        width:100%;
+        padding:10px;
+        background-color:#ccc;
+
+    }
+    #sidebar-left{
+        -webkit-box-flex: 1;
+        box-ordinal-group: 1;
+        -webkit-box-ordinal-group: 1;
+    }
+    #sidebar-right{
+        width:220px;
+        padding:10px;
+        background-color:#f36;
+        -webkit-box-flex: 1;
+        box-ordinal-group: 3;
+        -webkit-box-ordinal-group: 3;
+    }
+    #main{
+        background-color: #e66;
+        padding:10px;
+        margin:0 10px;
+        -webkit-box-flex: 1;
+        box-ordinal-group: 2;
+        -webkit-box-ordinal-group: 2;
+
+    }
+    /*page -> 3 column layout*/
+    #page{
+        height:33%;
+        width:100%;
+        display:-webkit-box;
+    }
+    html,body{
+        height:100%
+    }
+</style>
+<body>
+    <div id="header">
+        <h1>header</h1>
+    </div>
+    <div id="page">
+        <div id="main">
+            <h1>content</h1>
+        </div>
+        <div id="sidebar-left">
+            <h1>leftbar</h1>
+        </div>
+        
+        <div id="sidebar-right">
+            <h1>rightbar</h1>
+        </div>
+        
+    </div>
+    <div id="footer">
+        <h1>footer</h1>
+    </div>
+</body>
+</html>
