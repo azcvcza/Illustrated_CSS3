@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宽度自适应列</title>
+</head>
+<style>
+    html,body{
+        height:100%;
+        width:100%;
+    }
+    *{
+        margin:0;
+        padding:0;
+    }
+    .wrapper{
+        border:1px solid #ccc;
+        padding:5px;
+        columns:1em 4;
+        column-width: auto;
+        column-count:3;/*即使变化也是3列*/
+    }
+    h1{
+        font-size:1.5em;
+        margin-bottom:1em;
+        line-height:1.625;
+        font-size:.7em;
+    }
+    p{
+        margin-bottom:1em;
+        text-indent:2em;
+        line-height:1.625;
+        font-size:.7em;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <h1>newyork times:hello word</h1>
+        <p>netease saying:</p>
+        <p>can ms save win8?</p>
+        <p>it seems impossible</p>
+        <p>but it seems like</p>
+        <p>design a pc and laptop </p>
+        <p>but ms now..</p>
+        <p>this reminds that</p>
+        <p>but it worth..</p>
+        <p>but it worth..</p>
+        <p>but it worth..</p>
+        <p>but it worth..</p>
+        <p>but it worth..</p>
+        <p>but it worth..</p>
+    </div>
+</body>
+</html>
