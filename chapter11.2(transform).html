@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按键动画</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    h1{
+        float: none;
+    }
+    ul>li{
+        float:left;
+    }
+    #socialicons img,
+    #socialicons2 img{
+        transition:all 0.8s ease-in-out;
+    }
+    #socialicons img:hover{
+        transform:rotate(360deg) scale(1.5);
+    }
+    #socialicons2 img:hover{
+        transform:rotate(-360deg) scale(0.7);
+    }
+</style>
+<body>
+    
+    
+        <h1>顺时针旋转360度并放大1.2倍</h1>
+    <ul id="socialicons">
+        <li><a href="#"><img src="images/pic_1.png" alt=""></a></li>
+        <li><a href="#"><img src="images/pic_2.png" alt=""></a></li>
+        <li><a href="#"><img src="images/pic_3.png" alt=""></a></li>
+        <li><a href="#"><img src="images/pic_4.png" alt=""></a></li>
+        <li><a href="#"><img src="images/pic_5.png" alt=""></a></li>
+    </ul>
+    
+    <h1>逆时针旋转360度并缩小0.7倍</h1>
+    <ul id="socialicons2">
+        <li><a href="#"><img src="images/pic_1.png" alt=""></a></li>
+        <li><a href="#"><img src="images/pic_2.png" alt=""></a></li>
+        <li><a href="#"><img src="images/pic_3.png" alt=""></a></li>
+        <li><a href="#"><img src="images/pic_4.png" alt=""></a></li>
+        <li><a href="#"><img src="images/pic_5.png" alt=""></a></li>
+    </ul>
+</body>
+</html>
